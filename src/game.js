@@ -1,10 +1,14 @@
 class Game {
-  constructor(players) {
+  constructor(players, ) {
     this.players = players;
+    this.gameboard = [
+      [' ', ' ', ' '],
+      [' ', ' ', ' '],
+      [' ', ' ', ' '] ]
   }
 
   trackDataForGame() {
-    
+
   }
 
   whoseTurn() {
