@@ -2,7 +2,7 @@ class Player {
   constructor(token, id) {
     this.token = token;
     this.id = id;
-    this.wins = [];
+    this.wins = 0;
   }
 
   saveWinsToStorage() {
