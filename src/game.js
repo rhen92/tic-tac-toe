@@ -35,23 +35,27 @@ class Game {
   }
 
   checkForWins() {
-    // if (this.board[0] === '🌸' && this.board[1] === '🌸' && this.board[2] === '🌸') {
-    //   console.log('Player 1 wins!');
-    // } else if (this.board[3] === '🌸' && this.board[4] === '🌸' && this.board[5] === '🌸') {
-    //   console.log('Player 1 wins!');
-    // } else if (this.board[6] === '🌸' && this.board[7] === '🌸' && this.board[8] === '🌸') {
-    //   console.log('Player 1 wins!');
-    // } else if (this.board[0] === '🌸' && this.board[3] === '🌸' && this.board[6] === '🌸') {
-    //   console.log('Player 1 wins!')
-    // } else if (this.board[1] === '🌸' && this.board[4] === '🌸' && this.board[7] === '🌸') {
-    //   console.log('Player 1 wins!')
-    // } else if (this.board[2] === '🌸' && this.board[5] === '🌸' && this.board[8] === '🌸') {
-    //   console.log('Player 1 wins!')
-    // } else if (this.board[0] === '🌸' && this.board[4] === '🌸' && this.board[8] === '🌸') {
-    //   console.log('Player 1 wins!')
-    // } else if (this.board[2] === '🌸' && this.board[4] === '🌸' && this.board[6] === '🌸') {
-    //   console.log('Player 1 wins!')
-    // }
+    if (this.board[0] === '🌸' && this.board[1] === '🌸' && this.board[2] === '🌸' ||
+    this.board[3] === '🌸' && this.board[4] === '🌸' && this.board[5] === '🌸' ||
+    this.board[6] === '🌸' && this.board[7] === '🌸' && this.board[8] === '🌸' ||
+    this.board[0] === '🌸' && this.board[3] === '🌸' && this.board[6] === '🌸' ||
+    this.board[1] === '🌸' && this.board[4] === '🌸' && this.board[7] === '🌸' ||
+    this.board[2] === '🌸' && this.board[5] === '🌸' && this.board[8] === '🌸' ||
+    this.board[0] === '🌸' && this.board[4] === '🌸' && this.board[8] === '🌸' ||
+    this.board[2] === '🌸' && this.board[4] === '🌸' && this.board[6] === '🌸') {
+    //console.log need to be updated to change innerHTML once I start putting things on the DOM;
+      console.log('Player 1 wins!');
+    } else if (this.board[0] === '🌼' && this.board[1] === '🌼' && this.board[2] === '🌼' ||
+    this.board[3] === '🌼' && this.board[4] === '🌼' && this.board[5] === '🌼' ||
+    this.board[6] === '🌼' && this.board[7] === '🌼' && this.board[8] === '🌼' ||
+    this.board[0] === '🌼' && this.board[3] === '🌼' && this.board[6] === '🌼' ||
+    this.board[1] === '🌼' && this.board[4] === '🌼' && this.board[7] === '🌼' ||
+    this.board[2] === '🌼' && this.board[5] === '🌼' && this.board[8] === '🌼' ||
+    this.board[0] === '🌼' && this.board[4] === '🌼' && this.board[8] === '🌼' ||
+    this.board[2] === '🌼' && this.board[4] === '🌼' && this.board[6] === '🌼') {
+    //console.log need to be updated to change innerHTML once I start putting things on the DOM;
+      console.log('Player 2 wins!')
+    }
   }
 
   checkForDraw() {
