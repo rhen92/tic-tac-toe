@@ -18,13 +18,13 @@ class Game {
       }
     }
 
-  // fillInBoard(value) {
-  //   if (this.turn === this.players.player1) {
-  //     this.board[value] = '🌸';
-  //   } else if (this.turn === this.players.player2) {
-  //     this.board[value] = '🌼';
-  //   }
-  // }
+  fillInBoard(value) {
+    if (this.turn === this.players.player1) {
+      this.board[value] = '🌸';
+    } else if (this.turn === this.players.player2) {
+      this.board[value] = '🌼';
+    }
+  }
 
   whoseTurn() {
     if (this.turn === this.players.player1) {
