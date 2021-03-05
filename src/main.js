@@ -16,17 +16,28 @@ var ticTacToe = new Game();
 
 ticTacToe.fillInBoard(0);
 ticTacToe.whoseTurn();
-ticTacToe.fillInBoard(3);
+ticTacToe.fillInBoard(2);
 ticTacToe.whoseTurn();
 ticTacToe.fillInBoard(1);
 ticTacToe.whoseTurn();
+ticTacToe.fillInBoard(3);
+ticTacToe.whoseTurn();
+ticTacToe.fillInBoard(4);
+ticTacToe.whoseTurn();
+ticTacToe.fillInBoard(6);
+ticTacToe.whoseTurn();
+ticTacToe.fillInBoard(5);
+ticTacToe.whoseTurn();
 ticTacToe.fillInBoard(8);
 ticTacToe.whoseTurn();
-ticTacToe.fillInBoard(2);
-ticTacToe.whoseTurn();
-ticTacToe.checkForWins();
-  console.log(ticTacToe);
+ticTacToe.fillInBoard(7)
 
+
+
+ticTacToe.checkForWins();
+if(!ticTacToe.checkForWins()) {
+  ticTacToe.checkForDraw();
+}
 
 // ticTacToe.trackDataForGame(0);
 // if(ticTacToe.trackDataForGame(0)) {
