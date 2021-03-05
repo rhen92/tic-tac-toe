@@ -63,14 +63,13 @@ class Game {
   }
 
   checkForDraw() {
-    // for (var i = 0; i < this.board.length; i++) {
-    //   if (this.board[i] === ' ') {
-    //      return;
-    //     }
-    //   }
-    //   console.log('Its a draw!');
-    // }
-
+    for (var i = 0; i < this.board.length; i++) {
+      if (this.board[i] === ' ') {
+         return;
+        }
+      }
+      console.log('Its a draw!');
+    }
 
   saveWinningGame() {
 
