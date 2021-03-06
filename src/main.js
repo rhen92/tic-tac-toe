@@ -1,48 +1,65 @@
-//on window load see whose turn it is
-// window.addEventListener('load', function() {
-//
-// })
-
-//player 1 clicks somewhere in the 3X3 grid
-//switch to player 2's turn (whoseTurn method)
-//rewrite heading of whose turn it is at top of page
-//player 2 clicks somewhere in the 3X3 grid (trackDataForGame method?)
-//check to make sure its a valid click and not overwrite player 1's clicks (trackDataForGame method?)
-//check for possible wins (checkForWins method)
-//check for possible draws (checkForDraw method)
-//keep going with the back and forths until either check for wins comes back true or check for draws comes back true
-//reset the Game
+var board = document.querySelector('#gameBoard');
+var mainHeading = document.querySelector('#mainHeading');
 var ticTacToe = new Game();
 
-ticTacToe.fillInBoard(0);
-ticTacToe.whoseTurn();
-ticTacToe.fillInBoard(2);
-ticTacToe.whoseTurn();
-ticTacToe.fillInBoard(1);
-ticTacToe.whoseTurn();
-ticTacToe.fillInBoard(3);
-ticTacToe.whoseTurn();
-ticTacToe.fillInBoard(4);
-ticTacToe.whoseTurn();
-ticTacToe.fillInBoard(6);
-ticTacToe.whoseTurn();
-ticTacToe.fillInBoard(5);
-ticTacToe.whoseTurn();
-ticTacToe.fillInBoard(8);
-ticTacToe.whoseTurn();
-ticTacToe.fillInBoard(7)
+board.addEventListener('click', clickHandler);
 
-
-
-ticTacToe.checkForWins();
-if(!ticTacToe.checkForWins()) {
-  ticTacToe.checkForDraw();
+function clickHandler() {
+  if (event.target.classList.contains('zero')) {
+    seeIfEmpty(0);
+  } else if (event.target.classList.contains('one')) {
+    seeIfEmpty(1);
+  } else if (event.target.classList.contains('two')) {
+    seeIfEmpty(2);
+  } else if (event.target.classList.contains('three')) {
+    seeIfEmpty(3);
+  } else if (event.target.classList.contains('four')) {
+    seeIfEmpty(4);
+  } else if (event.target.classList.contains('five')) {
+    seeIfEmpty(5);
+  } else if (event.target.classList.contains('six')) {
+    seeIfEmpty(6);
+  } else if (event.target.classList.contains('seven')) {
+    seeIfEmpty(7);
+  } else if (event.target.classList.contains('eight')) {
+    seeIfEmpty(8);
+  }
 }
 
-// ticTacToe.trackDataForGame(0);
-// if(ticTacToe.trackDataForGame(0)) {
-//   ticTacToe.fillInBoard(0);
-//   ticTacToe.whoseTurn();
-// } else {
-//   console.log('Choose another spot');
-// }
+function seeIfEmpty(value) {
+  ticTacToe.trackDataForGame(value);
+  if (ticTacToe.trackDataForGame(value)) {
+    ticTacToe.fillInBoard(value);
+    displayBoard(event);
+    return;
+  } else {
+    return;
+  }
+}
+
+function displayBoard(event) {
+  event.target.innerText = `${ticTacToe.turn.token}`;
+  ticTacToe.checkForWins();
+  if (ticTacToe.checkForWins()) {
+    changeHeading();
+    board.removeEventListener('click', clickHandler);
+  } else {
+    ticTacToe.checkForDraw();
+    ticTacToe.whoseTurn();
+    changeHeading();
+  }
+}
+
+
+function changeHeading() {
+  if (ticTacToe.checkForWins()) {
+    mainHeading.innerText = `${ticTacToe.turn.token} won!`
+  } else if (!ticTacToe.checkForDraw()) {
+    mainHeading.innerText = 'It\s a draw!'
+  } else {
+    mainHeading.innerText = `It's ${ticTacToe.turn.token}'s turn`;
+  }
+}
+
+
+//reset the Game
