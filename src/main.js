@@ -1,23 +1,30 @@
 var board = document.querySelector('#gameBoard');
-var indexZero = document.querySelector('#zero');
-var indexOne = document.querySelector('#one');
-var indexTwo = document.querySelector('#two');
-var indexThree = document.querySelector('#three');
-var indexFour = document.querySelector('#four');
-var indexFive = document.querySelector('#five');
-var indexSix = document.querySelector('#six');
-var indexSeven = document.querySelector('#seven');
-var indexEight = document.querySelector('#eight');
 var mainHeading = document.querySelector('#mainHeading');
 var ticTacToe = new Game();
 //player 1 clicks somewhere in the 3X3 grid
 board.addEventListener('click', clickHandler);
 
-function clickHandler() {
-  if (event.target.classList.contains('zero')) {
-    seeIfEmpty(0);
-  }
-}
+// function clickHandler() {
+//   if (event.target.classList.contains('zero')) {
+//     seeIfEmpty(0);
+//   } else if (event.target.classList.contains('one')) {
+//     seeIfEmpty(1);
+//   } else if (event.target.classList.contains('two')) {
+//     seeIfEmpty(2);
+//   } else if (event.target.classList.contains('three')) {
+//     seeIfEmpty(3);
+//   } else if (event.target.classList.contains('four')) {
+//     seeIfEmpty(4);
+//   } else if (event.target.classList.contains('five')) {
+//     seeIfEmpty(5);
+//   } else if (event.target.classList.contains('six')) {
+//     seeIfEmpty(6);
+//   } else if (event.target.classList.contains('seven')) {
+//     seeIfEmpty(7);
+//   } else if (event.target.classList.contains('eight')) {
+//     seeIfEmpty(8);
+//   }
+// }
 
 function seeIfEmpty(value) {
   ticTacToe.trackDataForGame(value);
