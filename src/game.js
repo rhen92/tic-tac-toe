@@ -43,8 +43,6 @@ class Game {
       this.board[2] === '🌸' && this.board[5] === '🌸' && this.board[8] === '🌸' ||
       this.board[0] === '🌸' && this.board[4] === '🌸' && this.board[8] === '🌸' ||
       this.board[2] === '🌸' && this.board[4] === '🌸' && this.board[6] === '🌸') {
-      //console.log need to be updated to change innerHTML once I start putting things on the DOM;
-      console.log('Player 1 wins!');
       return true;
     } else if (this.board[0] === '🌼' && this.board[1] === '🌼' && this.board[2] === '🌼' ||
       this.board[3] === '🌼' && this.board[4] === '🌼' && this.board[5] === '🌼' ||
@@ -54,8 +52,6 @@ class Game {
       this.board[2] === '🌼' && this.board[5] === '🌼' && this.board[8] === '🌼' ||
       this.board[0] === '🌼' && this.board[4] === '🌼' && this.board[8] === '🌼' ||
       this.board[2] === '🌼' && this.board[4] === '🌼' && this.board[6] === '🌼') {
-      //console.log need to be updated to change innerHTML once I start putting things on the DOM;
-      console.log('Player 2 wins!');
       return true;
     } else {
       return false;
@@ -65,10 +61,10 @@ class Game {
   checkForDraw() {
     for (var i = 0; i < this.board.length; i++) {
       if (this.board[i] === ' ') {
-         return;
+         return true;
         }
       }
-      console.log('Its a draw!');
+      return false;
     }
 
   saveWinningGame() {
