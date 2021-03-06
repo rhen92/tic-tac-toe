@@ -75,10 +75,10 @@ function changeSideBar() {
   }
 }
 
-// function showWins() {
-//   ticTacToe.players.player1.retrieveWinsFromStorage();
-//   oneWinStatus.innerText = `${ticTacToe.players.player1.wins} wins`;
-//   ticTacToe.players.player2.retrieveWinsFromStorage();
-//   twoWinStatus.innerText = `${ticTacToe.players.player2.wins} wins`;
-// }
+function showWins() {
+  ticTacToe.players.player1.retrieveWinsFromStorage();
+  oneWinStatus.innerText = `${ticTacToe.players.player1.wins} wins`;
+  ticTacToe.players.player2.retrieveWinsFromStorage();
+  twoWinStatus.innerText = `${ticTacToe.players.player2.wins} wins`;
+}
 //reset the Game
