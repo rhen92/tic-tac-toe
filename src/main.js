@@ -40,9 +40,9 @@ function seeIfEmpty(value) {
 function displayBoard(event) {
   event.target.innerText = `${ticTacToe.turn.token}`;
   ticTacToe.checkForWins();
-  //if someone wins don't allow any more clicks
   if (ticTacToe.checkForWins()) {
     changeHeading();
+    board.removeEventListener('click', clickHandler);
   } else {
     ticTacToe.checkForDraw();
     ticTacToe.whoseTurn();
