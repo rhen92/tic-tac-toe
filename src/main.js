@@ -22,11 +22,11 @@ function seeIfEmpty(value) {
   }
 }
 
-// function displayBoard(event) {
-//   event.target.innerText = `${ticTacToe.turn.token}`;
-//   ticTacToe.whoseTurn();
-//   changeHeading();
-// }
+function displayBoard(event) {
+  event.target.innerText = `${ticTacToe.turn.token}`;
+  ticTacToe.whoseTurn();
+  changeHeading();
+}
 
 //rewrite heading of whose turn it is at top of page
 // function changeHeading() {
