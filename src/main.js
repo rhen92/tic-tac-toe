@@ -51,34 +51,15 @@ function displayBoard(event) {
 }
 
 
-// function changeHeading() {
-//   if (ticTacToe.checkForWins()) {
-//     mainHeading.innerText = `${ticTacToe.turn.token} won!`
-//   } else if (!ticTacToe.checkForDraw()) {
-//     mainHeading.innerText = 'It\s a draw!'
-//   } else {
-//     mainHeading.innerText = `It's ${ticTacToe.turn.token}'s turn`;
-//   }
-// }
+function changeHeading() {
+  if (ticTacToe.checkForWins()) {
+    mainHeading.innerText = `${ticTacToe.turn.token} won!`
+  } else if (!ticTacToe.checkForDraw()) {
+    mainHeading.innerText = 'It\s a draw!'
+  } else {
+    mainHeading.innerText = `It's ${ticTacToe.turn.token}'s turn`;
+  }
+}
 
-//check to make sure its a valid click and not overwrite player 1's clicks (trackDataForGame method?)
-//check for possible wins (checkForWins method)
-//check for possible draws (checkForDraw method)
-//keep going with the back and forths until either check for wins comes back true or check for draws comes back true
+
 //reset the Game
-
-
-
-
-// ticTacToe.checkForWins();
-// if(!ticTacToe.checkForWins()) {
-//   ticTacToe.checkForDraw();
-// }
-
-// ticTacToe.trackDataForGame(0);
-// if (ticTacToe.trackDataForGame(0)) {
-//   ticTacToe.fillInBoard(0);
-// } else {
-//   return;
-// }
-// ticTacToe.whoseTurn();
