@@ -31,9 +31,9 @@ function seeIfEmpty(value) {
   if (ticTacToe.trackDataForGame(value)) {
     ticTacToe.fillInBoard(value);
     displayBoard(event);
-    return true;
+    return;
   } else {
-    return false;
+    return;
   }
 }
 
