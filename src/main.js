@@ -1,5 +1,13 @@
 var board = document.querySelector('#gameBoard');
 var indexZero = document.querySelector('#zero');
+var indexOne = document.querySelector('#one');
+var indexTwo = document.querySelector('#two');
+var indexThree = document.querySelector('#three');
+var indexFour = document.querySelector('#four');
+var indexFive = document.querySelector('#five');
+var indexSix = document.querySelector('#six');
+var indexSeven = document.querySelector('#seven');
+var indexEight = document.querySelector('#eight');
 var mainHeading = document.querySelector('#mainHeading');
 var ticTacToe = new Game();
 //player 1 clicks somewhere in the 3X3 grid
