@@ -1,7 +1,7 @@
 var board = document.querySelector('#gameBoard');
 var mainHeading = document.querySelector('#mainHeading');
 var ticTacToe = new Game();
-//player 1 clicks somewhere in the 3X3 grid
+
 board.addEventListener('click', clickHandler);
 
 function clickHandler() {
@@ -39,16 +39,28 @@ function seeIfEmpty(value) {
 
 function displayBoard(event) {
   event.target.innerText = `${ticTacToe.turn.token}`;
-  ticTacToe.whoseTurn();
-  changeHeading();
+  ticTacToe.checkForWins();
+  //if someone wins don't allow any more clicks
+  if (ticTacToe.checkForWins()) {
+    changeHeading();
+  } else {
+    ticTacToe.checkForDraw();
+    ticTacToe.whoseTurn();
+    changeHeading();
+  }
 }
 
-//rewrite heading of whose turn it is at top of page
-function changeHeading() {
-  mainHeading.innerText = `It's ${ticTacToe.turn.token}'s turn`;
-}
 
-//player 2 clicks somewhere in the 3X3 grid (trackDataForGame method?)
+// function changeHeading() {
+//   if (ticTacToe.checkForWins()) {
+//     mainHeading.innerText = `${ticTacToe.turn.token} won!`
+//   } else if (!ticTacToe.checkForDraw()) {
+//     mainHeading.innerText = 'It\s a draw!'
+//   } else {
+//     mainHeading.innerText = `It's ${ticTacToe.turn.token}'s turn`;
+//   }
+// }
+
 //check to make sure its a valid click and not overwrite player 1's clicks (trackDataForGame method?)
 //check for possible wins (checkForWins method)
 //check for possible draws (checkForDraw method)
