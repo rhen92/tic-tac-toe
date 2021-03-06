@@ -68,7 +68,7 @@ class Game {
     }
 
   saveWinningGame() {
-
+    this.turn.saveWinsToStorage();
   }
 
   resetGame() {
