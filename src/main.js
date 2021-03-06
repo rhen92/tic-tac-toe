@@ -4,27 +4,27 @@ var ticTacToe = new Game();
 //player 1 clicks somewhere in the 3X3 grid
 board.addEventListener('click', clickHandler);
 
-// function clickHandler() {
-//   if (event.target.classList.contains('zero')) {
-//     seeIfEmpty(0);
-//   } else if (event.target.classList.contains('one')) {
-//     seeIfEmpty(1);
-//   } else if (event.target.classList.contains('two')) {
-//     seeIfEmpty(2);
-//   } else if (event.target.classList.contains('three')) {
-//     seeIfEmpty(3);
-//   } else if (event.target.classList.contains('four')) {
-//     seeIfEmpty(4);
-//   } else if (event.target.classList.contains('five')) {
-//     seeIfEmpty(5);
-//   } else if (event.target.classList.contains('six')) {
-//     seeIfEmpty(6);
-//   } else if (event.target.classList.contains('seven')) {
-//     seeIfEmpty(7);
-//   } else if (event.target.classList.contains('eight')) {
-//     seeIfEmpty(8);
-//   }
-// }
+function clickHandler() {
+  if (event.target.classList.contains('zero')) {
+    seeIfEmpty(0);
+  } else if (event.target.classList.contains('one')) {
+    seeIfEmpty(1);
+  } else if (event.target.classList.contains('two')) {
+    seeIfEmpty(2);
+  } else if (event.target.classList.contains('three')) {
+    seeIfEmpty(3);
+  } else if (event.target.classList.contains('four')) {
+    seeIfEmpty(4);
+  } else if (event.target.classList.contains('five')) {
+    seeIfEmpty(5);
+  } else if (event.target.classList.contains('six')) {
+    seeIfEmpty(6);
+  } else if (event.target.classList.contains('seven')) {
+    seeIfEmpty(7);
+  } else if (event.target.classList.contains('eight')) {
+    seeIfEmpty(8);
+  }
+}
 
 function seeIfEmpty(value) {
   ticTacToe.trackDataForGame(value);
