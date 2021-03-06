@@ -1,0 +1,17 @@
+.main {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.player-side {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 50%;
+  width: 10%;
+  background-color: #45BFB2;
+}
+
+.middle {
+  width: 75%;
+}
