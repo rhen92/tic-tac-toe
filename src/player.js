@@ -10,12 +10,12 @@ class Player {
     localStorage.setItem(`${this.id}winAmount`, JSON.stringify(this.wins));
   }
 
-//   retrieveWinsFromStorage() {
-//     var storage = JSON.parse(localStorage.getItem(`${this.id}winAmount`));
-//     if (!storage) {
-//       return;
-//     } else {
-//       this.wins = `${storage}`;
-//     }
-//   }
-// }
+  retrieveWinsFromStorage() {
+    var storage = JSON.parse(localStorage.getItem(`${this.id}winAmount`));
+    if (!storage) {
+      return;
+    } else {
+      this.wins = `${storage}`;
+    }
+  }
+}
