@@ -29,9 +29,9 @@ function displayBoard(event) {
 }
 
 //rewrite heading of whose turn it is at top of page
-// function changeHeading() {
-//   mainHeading.innerText = `It's ${ticTacToe.turn.token}'s turn`;
-// }
+function changeHeading() {
+  mainHeading.innerText = `It's ${ticTacToe.turn.token}'s turn`;
+}
 
 //player 2 clicks somewhere in the 3X3 grid (trackDataForGame method?)
 //check to make sure its a valid click and not overwrite player 1's clicks (trackDataForGame method?)
