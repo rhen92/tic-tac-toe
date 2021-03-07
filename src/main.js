@@ -87,11 +87,11 @@ function restartGame() {
   window.setTimeout(boardCleanUp(), 1200);
 }
 
-// function boardCleanUp() {
-//   var children = board.childNodes;
-//   for (var i = 0; i < children.length; i++) {
-//     children[i].innerText = ' ';
-//   }
-//   mainHeading.innerText = `It's ${ticTacToe.turn.token}'s turn`;
-//   board.addEventListener('click', clickHandler);
-// }
+function boardCleanUp() {
+  var children = board.childNodes;
+  for (var i = 0; i < children.length; i++) {
+    children[i].innerText = ' ';
+  }
+  mainHeading.innerText = `It's ${ticTacToe.turn.token}'s turn`;
+  board.addEventListener('click', clickHandler);
+}
