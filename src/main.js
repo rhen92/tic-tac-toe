@@ -84,7 +84,7 @@ function showWins() {
 
 function restartGame() {
   ticTacToe.resetGame();
-  window.setTimeout(boardCleanUp(), 1200);
+  window.setTimeout(boardCleanUp, 1200);
 }
 
 function boardCleanUp() {
