@@ -72,6 +72,6 @@ class Game {
   }
 
   resetGame() {
-
+    this.board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
   }
 }
