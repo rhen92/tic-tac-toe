@@ -47,13 +47,13 @@ function displayBoard(event) {
   if (ticTacToe.checkForWins()) {
     changeHeading();
     board.removeEventListener('click', clickHandler);
+    restartGame();
   } else {
     ticTacToe.checkForDraw();
     ticTacToe.whoseTurn();
     changeHeading();
   }
 }
-
 
 function changeHeading() {
   if (ticTacToe.checkForWins()) {
@@ -68,7 +68,7 @@ function changeHeading() {
 
 function changeSideBar() {
   ticTacToe.saveWinningGame();
-  if(ticTacToe.turn.id === 1) {
+  if (ticTacToe.turn.id === 1) {
     oneWinStatus.innerText = `${ticTacToe.turn.wins} wins`;
   } else {
     twoWinStatus.innerText = `${ticTacToe.turn.wins} wins`;
@@ -81,4 +81,17 @@ function showWins() {
   ticTacToe.players.player2.retrieveWinsFromStorage();
   twoWinStatus.innerText = `${ticTacToe.players.player2.wins} wins`;
 }
-//reset the Game
+
+function restartGame() {
+  ticTacToe.resetGame();
+  window.setTimeout(boardCleanUp(), 1200);
+}
+
+// function boardCleanUp() {
+//   var children = board.childNodes;
+//   for (var i = 0; i < children.length; i++) {
+//     children[i].innerText = ' ';
+//   }
+//   mainHeading.innerText = `It's ${ticTacToe.turn.token}'s turn`;
+//   board.addEventListener('click', clickHandler);
+// }
