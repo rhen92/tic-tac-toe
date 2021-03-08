@@ -1,5 +1,6 @@
 # Tic-tac-toe
 Turing 2102 FE Solo Project
+
 **Project Manager: [Heather Faerber](https://github.com/hfaerber)**
 
 ## Developer:
