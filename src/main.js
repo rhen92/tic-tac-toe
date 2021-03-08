@@ -48,6 +48,10 @@ function displayBoard(event) {
   if (ticTacToe.checkForWins('🌸') || ticTacToe.checkForWins('🌼')) {
     changeHeading();
     board.removeEventListener('click', clickHandler);
+    confetti({
+      particleCount: 400,
+      spread: 180
+    });
   } else {
     ticTacToe.checkForDraw();
     ticTacToe.whoseTurn();
@@ -86,7 +90,7 @@ function showWins() {
 
 function restartGame() {
   ticTacToe.resetGame();
-  window.setTimeout(boardCleanUp, 1350);
+  window.setTimeout(boardCleanUp, 3700);
 }
 
 function boardCleanUp() {
