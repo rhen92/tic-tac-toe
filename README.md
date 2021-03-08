@@ -29,7 +29,7 @@ Turing 2102 FE Solo Project
 - Wins will be kept track of on the sides of the board for each player.
 - Winner of the tic-tac-toe game, gets to go first on the next game playthrough.
 
-(https://media.giphy.com/media/NBKp2W7F9AyEIRDDoT/giphy.gif)
+![Playthrough](https://media.giphy.com/media/NBKp2W7F9AyEIRDDoT/giphy.gif)
 
 ## Future Additions
 - Have the option if someone wants to play with a computer vs. another player.
