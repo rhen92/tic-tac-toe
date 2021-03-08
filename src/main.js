@@ -30,10 +30,10 @@ function clickHandler() {
   }
 }
 
-function seeIfEmpty(value) {
-  ticTacToe.trackDataForGame(value);
-  if (ticTacToe.trackDataForGame(value)) {
-    ticTacToe.fillInBoard(value);
+function seeIfEmpty(index) {
+  ticTacToe.trackDataForGame(index);
+  if (ticTacToe.trackDataForGame(index)) {
+    ticTacToe.fillInBoard(index);
     displayBoard(event);
     return;
   } else {
@@ -43,11 +43,11 @@ function seeIfEmpty(value) {
 
 function displayBoard(event) {
   event.target.innerText = `${ticTacToe.turn.token}`;
-  ticTacToe.checkForWins();
-  if (ticTacToe.checkForWins()) {
+  ticTacToe.checkForWins('🌸');
+  ticTacToe.checkForWins('🌼');
+  if (ticTacToe.checkForWins('🌸') || ticTacToe.checkForWins('🌼')) {
     changeHeading();
     board.removeEventListener('click', clickHandler);
-    restartGame();
   } else {
     ticTacToe.checkForDraw();
     ticTacToe.whoseTurn();
@@ -56,11 +56,13 @@ function displayBoard(event) {
 }
 
 function changeHeading() {
-  if (ticTacToe.checkForWins()) {
+  if (ticTacToe.checkForWins('🌸') || ticTacToe.checkForWins('🌼')) {
     mainHeading.innerText = `${ticTacToe.turn.token} won!`;
     changeSideBar();
+    restartGame();
   } else if (!ticTacToe.checkForDraw()) {
     mainHeading.innerText = 'It\s a draw!';
+    restartGame();
   } else {
     mainHeading.innerText = `It's ${ticTacToe.turn.token}'s turn`;
   }
@@ -84,7 +86,7 @@ function showWins() {
 
 function restartGame() {
   ticTacToe.resetGame();
-  window.setTimeout(boardCleanUp, 1200);
+  window.setTimeout(boardCleanUp, 1350);
 }
 
 function boardCleanUp() {
