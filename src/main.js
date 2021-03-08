@@ -65,7 +65,7 @@ function changeHeading() {
     changeSideBar();
     restartGame();
   } else if (!ticTacToe.checkForDraw()) {
-    mainHeading.innerText = 'It\s a draw!';
+    mainHeading.innerText = 'It\'s a draw!';
     restartGame();
   } else {
     mainHeading.innerText = `It's ${ticTacToe.turn.token}'s turn`;
