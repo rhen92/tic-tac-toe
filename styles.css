@@ -2,15 +2,18 @@
   text-align: center;
   display: flex;
   justify-content: space-evenly;
-  font-size: 1.5em;
+  font-size: 1.7em;
+  font-family: "Noto Sans", sans-serif;
+  color: #690370;
 }
 
 .player-side {
   padding-left: 10%;
   padding-right: 10%;
-  padding-bottom: 50%;
+  padding-bottom: 30%;
   width: 10%;
-  background-color: #45BFB2;
+  background: linear-gradient(#45BFB2, #19718C);
+  font-size: 1.2em;
 }
 
 .middle {
@@ -27,6 +30,7 @@
 }
 
 .grid-item {
-  border: 1px solid black;
-  font-size: 6em
+  border: 2px solid #270E82;
+  font-size: 5em;
+  box-shadow: 2px 2px;
 }

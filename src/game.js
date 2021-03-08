@@ -34,24 +34,15 @@ class Game {
     }
   }
 
-  checkForWins() {
-    if (this.board[0] === '🌸' && this.board[1] === '🌸' && this.board[2] === '🌸' ||
-      this.board[3] === '🌸' && this.board[4] === '🌸' && this.board[5] === '🌸' ||
-      this.board[6] === '🌸' && this.board[7] === '🌸' && this.board[8] === '🌸' ||
-      this.board[0] === '🌸' && this.board[3] === '🌸' && this.board[6] === '🌸' ||
-      this.board[1] === '🌸' && this.board[4] === '🌸' && this.board[7] === '🌸' ||
-      this.board[2] === '🌸' && this.board[5] === '🌸' && this.board[8] === '🌸' ||
-      this.board[0] === '🌸' && this.board[4] === '🌸' && this.board[8] === '🌸' ||
-      this.board[2] === '🌸' && this.board[4] === '🌸' && this.board[6] === '🌸') {
-      return true;
-    } else if (this.board[0] === '🌼' && this.board[1] === '🌼' && this.board[2] === '🌼' ||
-      this.board[3] === '🌼' && this.board[4] === '🌼' && this.board[5] === '🌼' ||
-      this.board[6] === '🌼' && this.board[7] === '🌼' && this.board[8] === '🌼' ||
-      this.board[0] === '🌼' && this.board[3] === '🌼' && this.board[6] === '🌼' ||
-      this.board[1] === '🌼' && this.board[4] === '🌼' && this.board[7] === '🌼' ||
-      this.board[2] === '🌼' && this.board[5] === '🌼' && this.board[8] === '🌼' ||
-      this.board[0] === '🌼' && this.board[4] === '🌼' && this.board[8] === '🌼' ||
-      this.board[2] === '🌼' && this.board[4] === '🌼' && this.board[6] === '🌼') {
+  checkForWins(value) {
+    if (this.board[0] === value && this.board[1] === value && this.board[2] === value ||
+      this.board[3] === value && this.board[4] === value && this.board[5] === value ||
+      this.board[6] === value && this.board[7] === value && this.board[8] === value ||
+      this.board[0] === value && this.board[3] === value && this.board[6] === value ||
+      this.board[1] === value && this.board[4] === value && this.board[7] === value ||
+      this.board[2] === value && this.board[5] === value && this.board[8] === value ||
+      this.board[0] === value && this.board[4] === value && this.board[8] === value ||
+      this.board[2] === value && this.board[4] === value && this.board[6] === value) {
       return true;
     } else {
       return false;
