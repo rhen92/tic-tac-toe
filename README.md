@@ -6,7 +6,7 @@ Turing 2102 FE Solo Project
 ## Developer:
 - [Rachel Hendricks](https://github.com/rhen92)  
 
-## Deployed link:
+## Deploy link:
 https://rhen92.github.io/tic-tac-toe/
 
 ## Technology Used
